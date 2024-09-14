@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clicker</title>
+    <style>
+        .big-button {
+            font-size: 36px;
+            padding: 20px 40px;
+            margin-right: 20px;  /* Adds space between the buttons */
+        }
+
+        .magenta-button {
+            background-color: magenta;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .blue-button {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: {{ 'none' if hidden else 'block' }};
+        }
+    </style>
+</head>
+<body>
+    <button class="big-button magenta-button" onclick="fetch('/click?pos=gps')">
+        Click cursor on GPS
+    </button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button class="big-button blue-button" onclick="fetch('/click?pos=controls')">
+        Click cursor on Controls
+    </button>
+</body>
+</html>
